@@ -23,4 +23,9 @@ typedef struct {
 Tensor* create_tensor(const float* data, const int* shape, int ndim);
 void free_tensor(Tensor* tensor);
 float get_element(const Tensor* tensor, const int* indices);
+Tensor* add_tensor(const Tensor* tensor1, const Tensor* tensor2);
+Tensor* sub_tensor(const Tensor* tensor1, const Tensor* tensor2);
+Tensor* elementwise_mul_tensor(const Tensor* tensor1, const Tensor* tensor2);
+Tensor* assign_tensor(const Tensor* tensor);
+Tensor* reshape_tensor(Tensor* tensor, int* new_shape, int new_ndim);
 #endif 
